@@ -1,53 +1,22 @@
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmChucVu.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangKi.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDoiMatKhau.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmhuongdan.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmMain.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmThanNhan.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmThongTinTaiKhoan.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
-G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmChucVu.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.cache
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmhuongdan.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmMain.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
-H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmChucVu.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmhuongdan.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmMain.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangKi.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDoiMatKhau.resources
-C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmThongTinTaiKhoan.resources

@@ -51,6 +51,7 @@
     <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
     <Compile Include="BUS\PhongBanBus.cs" />
+    <Compile Include="BUS\ThanNhanBUS.cs" />
     <Compile Include="BUS\ThoiGianCongTacBUS.cs" />
     <Compile Include="BUS\TrinhDoHocVanBUS.cs" />
     <Compile Include="DAL\ChucVuDAL.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="DAL\NguoiDungDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\PhongBanDAL.cs" />
+    <Compile Include="DAL\ThanNhanDAL.cs" />
     <Compile Include="DAL\ThoiGianCongTacDAL.cs" />
     <Compile Include="DAL\TrinhDoHocVanDAL.cs" />
     <Compile Include="ENTITY\ChucVuEntity.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="ENTITY\NguoiDung.cs" />
     <Compile Include="ENTITY\NhanVienEntity.cs" />
     <Compile Include="ENTITY\PhongBanEntity.cs" />
+    <Compile Include="ENTITY\ThanNhan.cs" />
     <Compile Include="ENTITY\ThoiGianCongTacEntity.cs" />
     <Compile Include="ENTITY\TrinhDoHocVan.cs" />
     <Compile Include="Program.cs" />
@@ -136,6 +139,12 @@
     <Compile Include="VIEW\frmTGCT.Designer.cs">
       <DependentUpon>frmTGCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmThanNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmThanNhan.Designer.cs">
+      <DependentUpon>frmThanNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmThongTinTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmTGCT.resx">
       <DependentUpon>frmTGCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmThanNhan.resx">
+      <DependentUpon>frmThanNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmThongTinTaiKhoan.resx">
       <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>

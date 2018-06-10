@@ -1,5 +1,4 @@
-﻿using QuanLyNhanSu.BUS;
-using QuanLyNhanSu.ENTITY;
+﻿
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,7 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-
+using QuanLyNhanSu.BUS;
+using QuanLyNhanSu.ENTITY;
 namespace QuanLyNhanSu.VIEW
 {
     public partial class frmNhanVien : Form
