@@ -19,6 +19,8 @@ namespace QuanLyNhanSu.VIEW
         NhanVienBUS Bus = new NhanVienBUS();
         ThoiGianCongTacBUS TimeBus = new ThoiGianCongTacBUS();
         ThoiGianCongTacEntity Time = new ThoiGianCongTacEntity();
+        DanTocBUS dantocBus = new DanTocBUS();
+
         private int fluu = 1;
         public frmNhanVien()
         {
@@ -40,6 +42,15 @@ namespace QuanLyNhanSu.VIEW
             cmbChucVu.DataSource = dt;
             cmbChucVu.DisplayMember = "TenChucVu";
             cmbChucVu.ValueMember = "MaChucVu";
+
+        }
+        public void ShowDanToc()
+        {
+            DataTable dt = new DataTable();
+            dt = dantocBus.GetData();
+            cmbDanToc.DataSource = dt;
+            cmbDanToc.DisplayMember = "TenDanToc";
+            cmbDanToc.ValueMember = "MaDanToc";
 
         }
         public void ShowLuong()
@@ -67,7 +78,7 @@ namespace QuanLyNhanSu.VIEW
             btnHuy.Enabled = e;
             dtNgaySinh.Enabled = e;      
             cmbBacLuong.Enabled = e;
-            txtDanToc.Enabled = e;
+            cmbDanToc.Enabled = e;
             txtHoTen.Enabled = e;
             cmbMaPB.Enabled = e;
             txtMaNV.Enabled = e;
@@ -83,7 +94,7 @@ namespace QuanLyNhanSu.VIEW
         {
             txtMaNV.Text = "";
             cmbBacLuong.Text = "";
-            txtDanToc.Text = "";
+            cmbDanToc.Text = "";
             txtHoTen.Text = "";
             radNam.Checked=false;
             radNu.Checked = false;
@@ -119,6 +130,7 @@ namespace QuanLyNhanSu.VIEW
             ShowLuong();
             ShowTDHV();
             ShowChucVu();
+            ShowDanToc();
             if(frmDangNhap.Temp=="Quản Lý")
             {
                 btnTGCT.Enabled = true;
@@ -215,7 +227,7 @@ namespace QuanLyNhanSu.VIEW
             {
                 MessageBox.Show("Bạn chưa nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else if (txtDanToc.Text == "")
+            else if (cmbDanToc.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập dân tộc của nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -256,7 +268,7 @@ namespace QuanLyNhanSu.VIEW
                 obj.HoTen = txtHoTen.Text;
                 obj.MaPB = cmbMaPB.SelectedValue.ToString();
                 obj.QueQuan = txtQueQuan.Text;
-                obj.DanToc = txtDanToc.Text;
+                obj.DanToc = cmbDanToc.SelectedValue.ToString();
                 obj.MaTDHV = cmbMaTDHV.SelectedValue.ToString();
                 obj.SDT = txtSDT.Text;
                 obj.NgaySinh = dtNgaySinh.Value;
@@ -334,7 +346,7 @@ namespace QuanLyNhanSu.VIEW
             if (fluu == 0)
             {
                 txtHoTen.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["HoTen"].Value);
-                txtDanToc.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["DanToc"].Value);
+                cmbDanToc.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["DanToc"].Value);
                 txtSDT.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["SDT"].Value);
                 txtQueQuan.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["QueQuan"].Value);
                 dtNgaySinh.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value);
@@ -349,7 +361,7 @@ namespace QuanLyNhanSu.VIEW
             {
                 txtMaNV.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["MaNV"].Value);
                 txtHoTen.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["HoTen"].Value);
-                txtDanToc.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["DanToc"].Value);
+                cmbDanToc.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["DanToc"].Value);
                 txtSDT.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["SDT"].Value);
                 txtQueQuan.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["QueQuan"].Value);
                 dtNgaySinh.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["NgaySinh"].Value);
@@ -363,11 +375,10 @@ namespace QuanLyNhanSu.VIEW
         }
 
         private void btnTGCT_Click(object sender, EventArgs e)
-        {
-           
+        { 
             frmTGCT frm = new frmTGCT();
             frm.Show();
-            
+            this.Hide();
         }
     }
 }

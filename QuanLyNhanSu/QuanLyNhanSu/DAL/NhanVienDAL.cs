@@ -22,7 +22,7 @@ namespace QuanLyNhanSu.DAL
             {
                  new SqlParameter("MaNV",NV.MaNV),
                 new SqlParameter("HoTen",NV.HoTen),
-                new SqlParameter("DanToc",NV.DanToc),
+                new SqlParameter("MaDanToc",NV.DanToc),
                 new SqlParameter("GioiTinh",NV.GioiTinh),
                 new SqlParameter ("SDT",NV.SDT),
                 new SqlParameter("QueQuan",NV.QueQuan),
@@ -39,7 +39,7 @@ namespace QuanLyNhanSu.DAL
             {
                 new SqlParameter("MaNV",NV.MaNV),
                 new SqlParameter("HoTen",NV.HoTen),
-                new SqlParameter("DanToc",NV.DanToc),
+                new SqlParameter("MaDanToc",NV.DanToc),
                 new SqlParameter("GioiTinh",NV.GioiTinh),
                 new SqlParameter ("SDT",NV.SDT),
                 new SqlParameter("QueQuan",NV.QueQuan),

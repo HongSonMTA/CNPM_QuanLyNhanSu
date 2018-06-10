@@ -113,4 +113,3 @@ BEGIN
 	DELETE dbo.ThanNhan
 	WHERE TenTN = @TenTN
 END
- 

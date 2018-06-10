@@ -16,11 +16,6 @@ namespace QuanLyNhanSu.DAL
         {
             return conn.GetData("PB_SelectAll", null);
         }
-        public DataTable GetDataByID(String ID)
-        {
-            SqlParameter[] para = { new SqlParameter("Ma", ID) };
-            return conn.GetData("PB_SelectByID", para);
-        }
         public int InsertData(PhongBanEntity pb)
         {
             SqlParameter[] para =

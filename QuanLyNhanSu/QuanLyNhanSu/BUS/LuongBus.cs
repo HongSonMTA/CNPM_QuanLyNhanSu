@@ -31,6 +31,10 @@ namespace QuanLyNhanSu.BUS
         {
             return luong_DAL.DeleteData(ID);
         }
+        public DataTable TimKiem(string strTimKiem)
+        {
+            return luong_DAL.TimKiem(strTimKiem);
+        }
         public string TangMa()
         {
             return luong_DAL.TangMa();

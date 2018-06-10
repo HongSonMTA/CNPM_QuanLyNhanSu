@@ -49,10 +49,9 @@ namespace QuanLyNhanSu.DAL
         };
             return conn.ExcuteSQL("SP_XoaThanNhan", para);
         }
-
-        public string TangMa()
+        public DataTable TimKiem(string strTimKiem)
         {
-            return conn.TangMa("Select * From ThanNhan ", "TN");
+            return conn.GetData(strTimKiem);
         }
     }
 }

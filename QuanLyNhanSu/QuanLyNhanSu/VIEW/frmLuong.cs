@@ -162,5 +162,30 @@ namespace QuanLyNhanSu.VIEW
                 HienThi();
         }
 
-          }
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cmbTimKiem.Text == "Bậc Lương")
+            {
+                dgvLuong.DataSource = Bus.TimKiem("SELECT * FROM dbo.Luong WHERE BacLuong LIKE'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Lương Cơ Bản")
+            {
+                dgvLuong.DataSource = Bus.TimKiem("SELECT * FROM dbo.Luong WHERE LuongCoBan LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Hệ Số Phụ Cấp")
+            {
+                dgvLuong.DataSource = Bus.TimKiem("SELECT * FROM dbo.Luong WHERE HeSoPhuCap LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Hệ Số Lương")
+            {
+                dgvLuong.DataSource = Bus.TimKiem("SELECT * FROM dbo.Luong WHERE HeSoLuong LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+            cmbTimKiem.Text = "";
+        }
+    }
 }

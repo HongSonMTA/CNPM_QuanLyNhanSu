@@ -130,6 +130,8 @@ namespace QuanLyNhanSu.VIEW
                 toolStripMenuItemQTCT.Enabled = true;
                 tàiKhoảnToolStripMenuItem.Enabled = true;
                 quảnLýChứcVụToolStripMenuItem.Enabled = true;
+                quảnLýThânNhânToolStripMenuItem.Enabled = true;
+                quảnLýDânTộcToolStripMenuItem.Enabled = true;
             }
             timer1.Enabled = true;
         }
@@ -177,6 +179,20 @@ namespace QuanLyNhanSu.VIEW
         private void quảnLýChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmChucVu frm = new frmChucVu();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void quảnLýThânNhânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThanNhan frmtn = new frmThanNhan();
+            frmtn.Show();
+            this.Hide();
+        }
+
+        private void quảnLýDânTộcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDanToc frm = new frmDanToc();
             frm.Show();
             this.Hide();
         }

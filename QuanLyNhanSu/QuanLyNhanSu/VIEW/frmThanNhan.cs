@@ -38,6 +38,7 @@ namespace QuanLyNhanSu.VIEW
             ShowNhanVien();
             cbNhanVien.Text = "";
             cbGioiTinh.Text = "Nam";
+            khoaBtn(false);
         }
 
         private void khoaBtn(bool e)
@@ -191,6 +192,28 @@ namespace QuanLyNhanSu.VIEW
                 khoaBtn(false);
                 clickBtn = 1;
             }
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cmbTimKiem.Text == "Theo Tên Thân Nhân")
+            {
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND TenTN LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Tên Nhân Viên")
+            {
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND HoTen LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            if (cmbTimKiem.Text == "Theo Tuổi")
+            {
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND Tuoi LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = "";
+            cmbTimKiem.Text = "";
         }
     }
 }

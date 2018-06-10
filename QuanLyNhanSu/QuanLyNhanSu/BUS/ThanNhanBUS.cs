@@ -29,10 +29,9 @@ namespace QuanLyNhanSu.BUS
         {
             return thanNhanDAL.DeleteData(tenThanNhan);
         }
-
-        public string TangMa()
+        public DataTable TimKiem(string strTimKiem)
         {
-            return thanNhanDAL.TangMa();
+            return thanNhanDAL.TimKiem(strTimKiem);
         }
     }
 }
