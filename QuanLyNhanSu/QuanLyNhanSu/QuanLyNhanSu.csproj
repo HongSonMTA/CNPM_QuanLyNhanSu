@@ -48,17 +48,20 @@
   <ItemGroup>
     <Compile Include="BUS\ChucVuBUS.cs" />
     <Compile Include="BUS\LuongBus.cs" />
+    <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
     <Compile Include="BUS\ThoiGianCongTacBUS.cs" />
     <Compile Include="BUS\TrinhDoHocVanBUS.cs" />
     <Compile Include="DAL\ChucVuDAL.cs" />
     <Compile Include="DAL\KetNoi.cs" />
     <Compile Include="DAL\LuongDAL.cs" />
+    <Compile Include="DAL\NguoiDungDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
     <Compile Include="DAL\ThoiGianCongTacDAL.cs" />
     <Compile Include="DAL\TrinhDoHocVanDAL.cs" />
     <Compile Include="ENTITY\ChucVuEntity.cs" />
     <Compile Include="ENTITY\LuongEntity.cs" />
+    <Compile Include="ENTITY\NguoiDung.cs" />
     <Compile Include="ENTITY\NhanVienEntity.cs" />
     <Compile Include="ENTITY\ThoiGianCongTacEntity.cs" />
     <Compile Include="ENTITY\TrinhDoHocVan.cs" />
@@ -70,11 +73,29 @@
     <Compile Include="VIEW\frmChucVu.Designer.cs">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmDangNhap.designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmhuongdan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmhuongdan.designer.cs">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmLuong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIEW\frmLuong.designer.cs">
       <DependentUpon>frmLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -102,12 +123,22 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="VIEW\frmChucVu.resx">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmhuongdan.resx">
+      <DependentUpon>frmhuongdan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmLuong.resx">
       <DependentUpon>frmLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
@@ -127,11 +158,76 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\image\Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\1157ec91bde4cbd.jpg" />
+    <None Include="Resources\1157ec91bde4cbd1.jpg" />
+    <Content Include="Resources\add.png" />
+    <Content Include="Resources\add_page.ico" />
+    <None Include="Resources\huongdan1.png" />
+    <None Include="Resources\exit.png" />
+    <None Include="Resources\chart.png" />
+    <None Include="Resources\book_open.png" />
+    <None Include="Resources\currency_dollar.png" />
+    <None Include="Resources\houses.png" />
+    <None Include="Resources\businessman.png" />
+    <Content Include="Resources\huongdan.png" />
+    <Content Include="Resources\image\001_01.gif" />
+    <Content Include="Resources\image\001_03.gif" />
+    <Content Include="Resources\image\001_29.png" />
+    <Content Include="Resources\image\001_39.png" />
+    <Content Include="Resources\image\0420180955.JPG" />
+    <Content Include="Resources\image\45.png" />
+    <Content Include="Resources\image\81.png" />
+    <Content Include="Resources\image\Access key.png" />
+    <Content Include="Resources\image\Access key1.png" />
+    <Content Include="Resources\image\address_book2.ico" />
+    <Content Include="Resources\image\Blue hills.jpg" />
+    <Content Include="Resources\image\book_blue_view.ico" />
+    <Content Include="Resources\image\book_open.png" />
+    <Content Include="Resources\image\book_open1.ico" />
+    <Content Include="Resources\image\book_open2.png" />
+    <Content Include="Resources\image\book_red.ico" />
+    <Content Include="Resources\image\box_view.ico" />
+    <Content Include="Resources\image\briefcase_document.ico" />
+    <Content Include="Resources\image\businessman.png" />
+    <Content Include="Resources\image\chart.png" />
+    <Content Include="Resources\image\chest_into.ico" />
+    <Content Include="Resources\image\column-chart.ico" />
+    <Content Include="Resources\image\copy.ico" />
+    <Content Include="Resources\image\currency_dollar.png" />
+    <Content Include="Resources\image\data_copy.ico" />
+    <Content Include="Resources\image\data_refresh.ico" />
+    <Content Include="Resources\image\down_minus.ico" />
+    <Content Include="Resources\image\exit.png" />
+    <Content Include="Resources\image\find.ico" />
+    <Content Include="Resources\image\folders.ico" />
+    <Content Include="Resources\image\gears.ico" />
+    <Content Include="Resources\image\get_info.ico" />
+    <Content Include="Resources\image\graphics-tablet.ico" />
+    <Content Include="Resources\image\help.ico" />
+    <Content Include="Resources\image\home.ico" />
+    <Content Include="Resources\image\houses.png" />
+    <Content Include="Resources\image\index_down.ico" />
+    <Content Include="Resources\image\key.ico" />
+    <Content Include="Resources\image\key1.ico" />
+    <Content Include="Resources\image\Locked users.png" />
+    <Content Include="Resources\image\LogoHV.png" />
+    <Content Include="Resources\image\money_envelope.ico" />
+    <Content Include="Resources\image\text_rich_marked.png" />
+    <Content Include="Resources\image\text_tree.ico" />
+    <Content Include="Resources\image\tools.ico" />
+    <Content Include="Resources\image\up_plus.ico" />
+    <Content Include="Resources\image\users_family.ico" />
+    <Content Include="Resources\image\windows.ico" />
+    <Content Include="Resources\image\window_split_hor.ico" />
+    <Content Include="Resources\image\window_split_ver.ico" />
+    <None Include="Resources\LogoHV.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
