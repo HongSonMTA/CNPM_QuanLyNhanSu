@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QuanLyNhanSu_Entity;
-using QuanLyNhanSu_BUS;
+using QuanLyNhanSu.ENTITY;
+using QuanLyNhanSu.BUS;
 
-namespace QuanLyNhanSu.QuanLyNhanSu
+namespace QuanLyNhanSu.VIEW
 {
     public partial class frmChucVu : Form
     {

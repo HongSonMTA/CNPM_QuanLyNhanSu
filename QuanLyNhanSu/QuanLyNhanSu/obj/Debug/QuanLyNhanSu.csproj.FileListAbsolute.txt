@@ -1,13 +1,13 @@
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmNhanVien.resources
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTGCTxCV.resources
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
-E:\Kỳ 6\Công Nghệ Phần Mềm\Bài Tập\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmChucVu.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources

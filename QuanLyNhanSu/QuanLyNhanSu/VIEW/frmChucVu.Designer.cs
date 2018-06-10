@@ -1,4 +1,4 @@
-﻿namespace QuanLyNhanSu.QuanLyNhanSu
+﻿namespace QuanLyNhanSu.VIEW
 {
     partial class frmChucVu
     {
@@ -112,8 +112,8 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.dgvChucVu);
             this.groupBox4.Location = new System.Drawing.Point(8, 197);

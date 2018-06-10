@@ -46,30 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\ChucVuBUS.cs" />
+    <Compile Include="BUS\LuongBus.cs" />
+    <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\ThoiGianCongTacBUS.cs" />
+    <Compile Include="BUS\TrinhDoHocVanBUS.cs" />
+    <Compile Include="DAL\ChucVuDAL.cs" />
+    <Compile Include="DAL\KetNoi.cs" />
+    <Compile Include="DAL\LuongDAL.cs" />
+    <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\ThoiGianCongTacDAL.cs" />
+    <Compile Include="DAL\TrinhDoHocVanDAL.cs" />
+    <Compile Include="ENTITY\ChucVuEntity.cs" />
+    <Compile Include="ENTITY\LuongEntity.cs" />
+    <Compile Include="ENTITY\NhanVienEntity.cs" />
+    <Compile Include="ENTITY\ThoiGianCongTacEntity.cs" />
+    <Compile Include="ENTITY\TrinhDoHocVan.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="QuanLyNhanSu\frmNhanVien.cs">
+    <Compile Include="VIEW\frmChucVu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanSu\frmNhanVien.designer.cs">
+    <Compile Include="VIEW\frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmLuong.designer.cs">
+      <DependentUpon>frmLuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmNhanVien.designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhanSu\frmTGCTxCV.cs">
+    <Compile Include="VIEW\frmTDHV.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="QuanLyNhanSu\frmTGCTxCV.designer.cs">
-      <DependentUpon>frmTGCTxCV.cs</DependentUpon>
+    <Compile Include="VIEW\frmTDHV.designer.cs">
+      <DependentUpon>frmTDHV.cs</DependentUpon>
     </Compile>
-    <Compile Include="QuanLyNhanSu_BUS\ChucVuBUS.cs" />
-    <Compile Include="QuanLyNhanSu_BUS\NhanVienBUS.cs" />
-    <Compile Include="QuanLyNhanSu_BUS\ThoiGianCongTacBUS.cs" />
-    <Compile Include="QuanLyNhanSu_DAL\ChucVuDAL.cs" />
-    <Compile Include="QuanLyNhanSu_DAL\KetNoi.cs" />
-    <Compile Include="QuanLyNhanSu_DAL\NhanVienDAL.cs" />
-    <Compile Include="QuanLyNhanSu_DAL\ThoiGianCongTacDAL.cs" />
-    <Compile Include="QuanLyNhanSu_Entity\ChucVuEntity.cs" />
-    <Compile Include="QuanLyNhanSu_Entity\NhanVienEntity.cs" />
-    <Compile Include="QuanLyNhanSu_Entity\ThoiGianCongTacEntity.cs" />
+    <Compile Include="VIEW\frmTGCT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmTGCT.Designer.cs">
+      <DependentUpon>frmTGCT.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -79,11 +103,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QuanLyNhanSu\frmNhanVien.resx">
+    <EmbeddedResource Include="VIEW\frmChucVu.resx">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmLuong.resx">
+      <DependentUpon>frmLuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="QuanLyNhanSu\frmTGCTxCV.resx">
-      <DependentUpon>frmTGCTxCV.cs</DependentUpon>
+    <EmbeddedResource Include="VIEW\frmTDHV.resx">
+      <DependentUpon>frmTDHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmTGCT.resx">
+      <DependentUpon>frmTGCT.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

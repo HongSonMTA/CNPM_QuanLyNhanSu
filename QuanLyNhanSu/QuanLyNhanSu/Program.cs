@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNhanSu.VIEW;
 
 namespace QuanLyNhanSu
 {
@@ -16,7 +17,7 @@ namespace QuanLyNhanSu
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmNhanVien());
+            Application.Run(new frmTDHV());
         }
     }
 }
