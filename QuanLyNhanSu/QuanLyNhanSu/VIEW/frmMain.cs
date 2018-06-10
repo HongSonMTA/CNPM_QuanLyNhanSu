@@ -44,8 +44,9 @@ namespace QuanLyNhanSu.VIEW
 
         private void toolStripMenuItemQuanLyPhongBan_Click(object sender, EventArgs e)
         {
-           
-          
+
+            frmphongBan t = new frmphongBan();
+            t.Show();
             this.Hide();
         }
 
@@ -79,8 +80,8 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnPhongBan_Click(object sender, EventArgs e)
         {
-            
-         
+            frmphongBan t = new frmphongBan();
+            t.Show();
             this.Hide();
         }
 

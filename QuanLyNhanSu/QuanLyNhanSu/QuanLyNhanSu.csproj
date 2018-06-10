@@ -50,6 +50,7 @@
     <Compile Include="BUS\LuongBus.cs" />
     <Compile Include="BUS\NguoiDungBUS.cs" />
     <Compile Include="BUS\NhanVienBUS.cs" />
+    <Compile Include="BUS\PhongBanBus.cs" />
     <Compile Include="BUS\ThoiGianCongTacBUS.cs" />
     <Compile Include="BUS\TrinhDoHocVanBUS.cs" />
     <Compile Include="DAL\ChucVuDAL.cs" />
@@ -57,12 +58,14 @@
     <Compile Include="DAL\LuongDAL.cs" />
     <Compile Include="DAL\NguoiDungDAL.cs" />
     <Compile Include="DAL\NhanVienDAL.cs" />
+    <Compile Include="DAL\PhongBanDAL.cs" />
     <Compile Include="DAL\ThoiGianCongTacDAL.cs" />
     <Compile Include="DAL\TrinhDoHocVanDAL.cs" />
     <Compile Include="ENTITY\ChucVuEntity.cs" />
     <Compile Include="ENTITY\LuongEntity.cs" />
     <Compile Include="ENTITY\NguoiDung.cs" />
     <Compile Include="ENTITY\NhanVienEntity.cs" />
+    <Compile Include="ENTITY\PhongBanEntity.cs" />
     <Compile Include="ENTITY\ThoiGianCongTacEntity.cs" />
     <Compile Include="ENTITY\TrinhDoHocVan.cs" />
     <Compile Include="Program.cs" />
@@ -103,6 +106,12 @@
     <Compile Include="VIEW\frmNhanVien.designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmphongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmphongBan.designer.cs">
+      <DependentUpon>frmphongBan.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmTDHV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +123,12 @@
     </Compile>
     <Compile Include="VIEW\frmTGCT.Designer.cs">
       <DependentUpon>frmTGCT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmTTPhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmTTPhongBan.designer.cs">
+      <DependentUpon>frmTTPhongBan.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -143,11 +158,17 @@
     <EmbeddedResource Include="VIEW\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmphongBan.resx">
+      <DependentUpon>frmphongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmTDHV.resx">
       <DependentUpon>frmTDHV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmTGCT.resx">
       <DependentUpon>frmTGCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmTTPhongBan.resx">
+      <DependentUpon>frmTTPhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -28,3 +28,5 @@ H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\D
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
+H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
+H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
