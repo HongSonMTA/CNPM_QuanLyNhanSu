@@ -159,7 +159,7 @@ namespace QuanLyNhanSu.VIEW
         {
             frmhuongdan hd = new frmhuongdan();
             hd.Show();
-            this.Hide();
+            
         }
 
         private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -191,6 +191,29 @@ namespace QuanLyNhanSu.VIEW
         }
 
         private void quảnLýDânTộcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDanToc frm = new frmDanToc();
+            frm.Show();
+            this.Hide();
+        }
+
+     
+
+        private void btnChucVu_Click(object sender, EventArgs e)
+        {
+            frmChucVu frm = new frmChucVu();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnThannhan_Click(object sender, EventArgs e)
+        {
+            frmThanNhan frmtn = new frmThanNhan();
+            frmtn.Show();
+            this.Hide();
+        }
+
+        private void btnDanToc_Click(object sender, EventArgs e)
         {
             frmDanToc frm = new frmDanToc();
             frm.Show();

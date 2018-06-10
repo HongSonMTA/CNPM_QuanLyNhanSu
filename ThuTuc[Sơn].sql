@@ -3,7 +3,7 @@ GO
 
 -- Hiện ra danh sách Nhân Viên
 GO
-ALTER PROC NV_SelectAll 
+create PROC NV_SelectAll 
 AS
 BEGIN
 	SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu 
@@ -22,7 +22,7 @@ GO
 -- Thêm Nhân Viên
 
 GO
-ALTER PROC ThemNV(@MaNV VARCHAR(10), @HoTen NVARCHAR(50), @MaDanToc VARCHAR(10), @GioiTinh NVARCHAR(5), @SDT CHAR(15), @QueQuan NVARCHAR(50), @NgaySinh DATE, @MaTDHV VARCHAR(10), @MaPB NVARCHAR(50), @BacLuong VARCHAR(10))
+create PROC ThemNV(@MaNV VARCHAR(10), @HoTen NVARCHAR(50), @MaDanToc VARCHAR(10), @GioiTinh NVARCHAR(5), @SDT CHAR(15), @QueQuan NVARCHAR(50), @NgaySinh DATE, @MaTDHV VARCHAR(10), @MaPB NVARCHAR(50), @BacLuong VARCHAR(10))
 AS
 BEGIN
 INSERT INTO dbo.NhanVien( MaNV , HoTen ,MaDanToc ,GioiTinh ,SDT ,QueQuan ,NgaySinh ,MaTDHV ,MaPB ,BacLuong)
@@ -32,7 +32,7 @@ END
 
 -- Sửa Nhân Viên
 GO
-ALTER PROC SuaNV(@MaNV VARCHAR(10), @HoTen NVARCHAR(50), @MaDanToc NVARCHAR(50), @GioiTinh NVARCHAR(5), @SDT CHAR(15), @QueQuan NVARCHAR(50), @NgaySinh DATE, @MaTDHV VARCHAR(10), @MaPB VARCHAR(10), @BacLuong VARCHAR(10))
+create PROC SuaNV(@MaNV VARCHAR(10), @HoTen NVARCHAR(50), @MaDanToc NVARCHAR(50), @GioiTinh NVARCHAR(5), @SDT CHAR(15), @QueQuan NVARCHAR(50), @NgaySinh DATE, @MaTDHV VARCHAR(10), @MaPB VARCHAR(10), @BacLuong VARCHAR(10))
 AS
 BEGIN
 UPDATE dbo.NhanVien
@@ -53,7 +53,7 @@ END
 --Thủ tục thời gian công tác--
 GO
 
-ALTER PROC Select_TGCT
+create PROC Select_TGCT
 AS
 BEGIN
 SELECT ThoiGianCongTac.MaNV,HoTen,TenChucVu,NgayNhanChuc FROM dbo.ThoiGianCongTac,dbo.ChucVu,NhanVien
@@ -72,7 +72,7 @@ BEGIN
 END
 ------------------
 GO
-ALTER PROC Sua_TGCT (@manv VARCHAR(10),@macv VARCHAR(10),@ngaynhanchuc DATE)
+create PROC Sua_TGCT (@manv VARCHAR(10),@macv VARCHAR(10),@ngaynhanchuc DATE)
 AS
 BEGIN
 	UPDATE dbo.ThoiGianCongTac

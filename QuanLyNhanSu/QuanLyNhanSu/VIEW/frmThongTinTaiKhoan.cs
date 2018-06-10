@@ -38,6 +38,7 @@ namespace QuanLyNhanSu.VIEW
             {
                 frmMain frmMain = new frmMain();
                 frmMain.Show();
+                this.Close();
             }
             else
                 frmThongTinTaiKhoan_Load(sender, e);

@@ -266,6 +266,7 @@
     <Content Include="Resources\image\book_red.ico" />
     <Content Include="Resources\image\box_view.ico" />
     <Content Include="Resources\image\briefcase_document.ico" />
+    <None Include="Resources\image\briefcase_document.png" />
     <Content Include="Resources\image\businessman.png" />
     <Content Include="Resources\image\chart.png" />
     <Content Include="Resources\image\chest_into.ico" />
@@ -280,9 +281,11 @@
     <Content Include="Resources\image\folders.ico" />
     <Content Include="Resources\image\gears.ico" />
     <Content Include="Resources\image\get_info.ico" />
+    <None Include="Resources\image\get_info.png" />
     <Content Include="Resources\image\graphics-tablet.ico" />
     <Content Include="Resources\image\help.ico" />
     <Content Include="Resources\image\home.ico" />
+    <None Include="Resources\image\houses - Copy.png" />
     <Content Include="Resources\image\houses.png" />
     <Content Include="Resources\image\index_down.ico" />
     <Content Include="Resources\image\key.ico" />
@@ -295,6 +298,7 @@
     <Content Include="Resources\image\tools.ico" />
     <Content Include="Resources\image\up_plus.ico" />
     <Content Include="Resources\image\users_family.ico" />
+    <None Include="Resources\image\users_family.png" />
     <Content Include="Resources\image\windows.ico" />
     <Content Include="Resources\image\window_split_hor.ico" />
     <Content Include="Resources\image\window_split_ver.ico" />

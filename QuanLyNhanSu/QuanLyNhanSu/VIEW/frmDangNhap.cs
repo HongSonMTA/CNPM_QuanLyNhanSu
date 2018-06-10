@@ -48,6 +48,7 @@ namespace QuanLyNhanSu.VIEW
                 {
                     frmMain mainn=new frmMain();
                     mainn.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -59,7 +60,7 @@ namespace QuanLyNhanSu.VIEW
         private void btnThoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
-            //MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
         }
         private void txtTenDangNhap_Click(object sender, EventArgs e)

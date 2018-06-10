@@ -1,4 +1,4 @@
-﻿use QuanLyNhanSu
+﻿use CNPM_QuanLyNhanSu
 GO
 
 --Minh--Phòng Ban
@@ -31,7 +31,7 @@ END
 
 GO
 --Hiển Thị dữ liệu
-ALTER PROC PB_SelectAll 
+create PROC PB_SelectAll 
 AS
 BEGIN
 		SELECT dbo.PhongBan.MaPB,TenPB,MaTP,DiaChi,dbo.PhongBan.SDT,COUNT(MaNV) AS SoLuong FROM dbo.PhongBan, dbo.NhanVien
