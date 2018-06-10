@@ -76,11 +76,23 @@
     <Compile Include="VIEW\frmChucVu.Designer.cs">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmDangKi.designer.cs">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VIEW\frmDangNhap.designer.cs">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VIEW\frmDoiMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmDoiMatKhau.designer.cs">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </Compile>
     <Compile Include="VIEW\frmhuongdan.cs">
       <SubType>Form</SubType>
@@ -124,6 +136,12 @@
     <Compile Include="VIEW\frmTGCT.Designer.cs">
       <DependentUpon>frmTGCT.cs</DependentUpon>
     </Compile>
+    <Compile Include="VIEW\frmThongTinTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VIEW\frmThongTinTaiKhoan.designer.cs">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="VIEW\frmTTPhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,8 +161,14 @@
     <EmbeddedResource Include="VIEW\frmChucVu.resx">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmDangKi.resx">
+      <DependentUpon>frmDangKi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmDoiMatKhau.resx">
+      <DependentUpon>frmDoiMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmhuongdan.resx">
       <DependentUpon>frmhuongdan.cs</DependentUpon>
@@ -166,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmTGCT.resx">
       <DependentUpon>frmTGCT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VIEW\frmThongTinTaiKhoan.resx">
+      <DependentUpon>frmThongTinTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VIEW\frmTTPhongBan.resx">
       <DependentUpon>frmTTPhongBan.cs</DependentUpon>

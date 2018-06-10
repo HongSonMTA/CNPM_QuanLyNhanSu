@@ -119,6 +119,10 @@ namespace QuanLyNhanSu.VIEW
             ShowLuong();
             ShowTDHV();
             ShowChucVu();
+            if(frmDangNhap.Temp=="Quản Lý")
+            {
+                btnTGCT.Enabled = true;
+            }
         }
 
 
@@ -154,6 +158,7 @@ namespace QuanLyNhanSu.VIEW
             fluu = 1;
             DisEnl(true);
             txtMaNV.Enabled = false;
+            cmbChucVu.Enabled = false;
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -290,6 +295,7 @@ namespace QuanLyNhanSu.VIEW
                     try
                     {
                         Bus.UpdateData(obj);
+                        TimeBus.UpdateData(Time);
                         MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         HienThi();
                         frmNhanVien_Load(sender, e);
@@ -337,6 +343,7 @@ namespace QuanLyNhanSu.VIEW
                 cmbBacLuong.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["TienLuong"].Value);
                 if (dgvNhanVien.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
                 else radNu.Checked = true;
+                cmbChucVu.Text= Convert.ToString(dgvNhanVien.CurrentRow.Cells["ChucVu"].Value);
             }
             else
             {
@@ -351,13 +358,16 @@ namespace QuanLyNhanSu.VIEW
                 cmbBacLuong.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["TienLuong"].Value);
                 if (dgvNhanVien.Rows[e.RowIndex].Cells["GioiTinh"].Value.ToString() == "Nam") radNam.Checked = true;
                 else radNu.Checked = true;
+                cmbChucVu.Text = Convert.ToString(dgvNhanVien.CurrentRow.Cells["ChucVu"].Value);
             }
         }
 
         private void btnTGCT_Click(object sender, EventArgs e)
         {
+           
             frmTGCT frm = new frmTGCT();
             frm.Show();
+            
         }
     }
 }

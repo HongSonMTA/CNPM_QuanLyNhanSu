@@ -81,7 +81,7 @@ namespace QuanLyNhanSu.DAL
         }
         public DataTable GetListChucVu()
         {
-            return conn.GetData("SPCVSELECTAll ", null);
+            return conn.GetData("SelectAll_CV", null);
         }
     }
 }

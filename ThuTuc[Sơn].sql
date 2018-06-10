@@ -3,7 +3,7 @@ GO
 
 -- Hiện ra danh sách Nhân Viên
 GO
-CREATE PROC NV_SelectAll 
+ALTER PROC NV_SelectAll 
 AS
 BEGIN
 	SELECT dbo.NhanVien.MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu 
@@ -16,13 +16,7 @@ BEGIN
 
 --
 GO
-create PROC NV_SelectByID (@MaNV varchar(10))
-AS
-BEGIN
-		SELECT * FROM dbo.NhanVien WHERE MaNV = @MaNV
-END
 
-GO
 
 -- Thêm Nhân Viên
 
@@ -58,10 +52,11 @@ END
 --Thủ tục thời gian công tác--
 GO
 
-CREATE PROC Select_TGCT
+ALTER PROC Select_TGCT
 AS
 BEGIN
-SELECT MaNV,TenChucVu,NgayNhanChuc FROM dbo.ThoiGianCongTac,dbo.ChucVu
+SELECT ThoiGianCongTac.MaNV,HoTen,TenChucVu,NgayNhanChuc FROM dbo.ThoiGianCongTac,dbo.ChucVu,NhanVien
+WHERE ThoiGianCongTac.MaNV = NhanVien.MaNV AND ThoiGianCongTac.MaCV = ChucVu.MaChucVu
 END
 -----------
 GO
@@ -76,12 +71,12 @@ BEGIN
 END
 ------------------
 GO
-CREATE PROC Sua_TGCT (@manv VARCHAR(10),@macv VARCHAR(10),@ngaynhanchuc DATE)
+ALTER PROC Sua_TGCT (@manv VARCHAR(10),@macv VARCHAR(10),@ngaynhanchuc DATE)
 AS
 BEGIN
 	UPDATE dbo.ThoiGianCongTac
 	SET NgayNhanChuc=@ngaynhanchuc
-	WHERE MaNV=@manv AND MaCV = @manv
+	WHERE MaNV=@manv AND  MaCV = @manv 
 END
 -----------------
 GO 

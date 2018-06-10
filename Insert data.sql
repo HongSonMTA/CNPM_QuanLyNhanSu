@@ -1,6 +1,8 @@
 ﻿USE QuanLyNhanSu
 GO 
 INSERT dbo.Luong ( BacLuong , LuongCoBan ,HeSoLuong , HeSoPhuCap )
+VALUES  ('BL01',3600000,1,1)
+INSERT dbo.Luong ( BacLuong , LuongCoBan ,HeSoLuong , HeSoPhuCap )
 VALUES  ('BL02',3800000,1,1)
 INSERT dbo.Luong ( BacLuong , LuongCoBan ,HeSoLuong , HeSoPhuCap )
 VALUES  ('BL03',3900000,1,1)
@@ -251,7 +253,7 @@ VALUES  ( 'NV09' , -- MaNV - varchar(10)
           N'Nam' , -- GioiTinh - nvarchar(5)
           '0989920387' , -- SDT - char(15)
           N'Hà Nội' , -- QueQuan - nvarchar(50)
-          '1993-02-29' , -- NgaySinh - date
+          '1994-05-19' , -- NgaySinh - date
           'TD02' , -- MaTDHV - varchar(10)
           'PB04' , -- MaPB - varchar(10)
           'BL04'  -- BacLuong - varchar(10)
@@ -281,3 +283,72 @@ VALUES  ( 'NV10' , -- MaNV - varchar(10)
           'BL05'  -- BacLuong - varchar(10)
         )
 
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV01','CV01','09/06/2013')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV02','CV05','02/21/2014')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV03','CV06','11/19/2012')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV04','CV02','05/11/2016')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV05','CV03','07/28/2015')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV06','CV04','04/20/2013')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV07','CV01','04/20/2013')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV08','CV02','04/20/2013')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV09','CV03','04/20/2013')
+INSERT dbo.ThoiGianCongTac
+        ( MaNV, MaCV, NgayNhanChuc )
+VALUES  ( 'NV10','CV01','04/20/2013')
+
+
+
+
+
+
+
+INSERT INTO dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV01',N'Giám Đốc')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV02',N'Trường Phòng')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV03',N'Phó Giám Đốc')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV04',N'Phó Phòng')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV05',N'Trường Nhóm')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV06',N'Phó Nhóm')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV07',N'Nhân Viên')
+INSERT dbo.ChucVu
+        ( MaChucVu, TenChucVu )
+VALUES  ('CV08',N'Thư Ký')
+
+INSERT INTO dbo.NguoiDung
+        ( TaiKhoan, MatKhau,PhanQuyen,MaNV )
+VALUES  ( N'NV01', 
+          N'123',
+		  N'Quản Lý',
+		  'NV01'  
+          )

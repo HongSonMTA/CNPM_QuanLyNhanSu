@@ -101,8 +101,8 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnQuaTrinhCongTac_Click(object sender, EventArgs e)
         {
-           
-           
+            frmTGCT frm = new frmTGCT();
+            frm.Show();        
             this.Hide();
         }
         private int i = 10;
@@ -118,6 +118,19 @@ namespace QuanLyNhanSu.VIEW
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            if(frmDangNhap.Temp == "Quản Lý")
+            {
+                btnPhongBan.Enabled = true;
+                btnNangLuong.Enabled = true;
+                btnTĐHV.Enabled = true;
+                btnQuaTrinhCongTac.Enabled = true;
+                toolStripMenuItemQuanLyPhongBan.Enabled = true;
+                ToolStripMenuItemQuanLyNangLuong.Enabled = true;
+                ToolStripMenuItemQuanLyTĐHV.Enabled = true;
+                toolStripMenuItemQTCT.Enabled = true;
+                tàiKhoảnToolStripMenuItem.Enabled = true;
+                quảnLýChứcVụToolStripMenuItem.Enabled = true;
+            }
             timer1.Enabled = true;
         }
 
@@ -144,6 +157,28 @@ namespace QuanLyNhanSu.VIEW
         {
             frmhuongdan hd = new frmhuongdan();
             hd.Show();
+            this.Hide();
+        }
+
+        private void tàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmThongTinTaiKhoan frmTT = new frmThongTinTaiKhoan();
+            frmTT.Show();
+            this.Hide();
+        }
+
+        private void đổiMậtKhẩuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDoiMatKhau frmDoiPass = new frmDoiMatKhau();
+            frmDoiPass.Show();
+            this.Hide();
+        }
+
+        private void quảnLýChứcVụToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmChucVu frm = new frmChucVu();
+            frm.Show();
+            this.Hide();
         }
     }
 }

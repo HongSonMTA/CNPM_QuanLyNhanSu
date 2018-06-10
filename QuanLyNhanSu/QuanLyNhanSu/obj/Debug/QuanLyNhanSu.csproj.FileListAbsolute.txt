@@ -30,3 +30,24 @@ H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\D
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe.config
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.exe
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\bin\Debug\QuanLyNhanSu.pdb
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csprojResolveAssemblyReference.cache
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.Properties.Resources.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmChucVu.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangNhap.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmhuongdan.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmLuong.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmMain.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmNhanVien.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmphongBan.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTDHV.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmTGCT.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.frmTTPhongBan.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.GenerateResource.Cache
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDangKi.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDoiMatKhau.resources
+C:\Users\Hong Son\Desktop\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmThongTinTaiKhoan.resources

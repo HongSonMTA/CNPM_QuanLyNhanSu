@@ -10,5 +10,7 @@ namespace QuanLyNhanSu.ENTITY
     {
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
+        public string PhanQuyen { get; set; }
+        public string MaNV { get; set; }
     }
 }
