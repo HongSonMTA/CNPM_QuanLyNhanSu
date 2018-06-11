@@ -64,4 +64,11 @@ MaNV VARCHAR(10) REFERENCES dbo.NhanVien(MaNV),
 GioiTinh NVARCHAR(5) CHECK(GioiTinh IN (N'Nam',N'Nữ')),
 MoiQuanHe NVARCHAR(30),
 Tuoi INT
+
+)
+GO 
+CREATE TABLE DanToc(
+	MaDanToc VARCHAR(10) PRIMARY KEY,
+	TenDanToc NVARCHAR(50),
+	GhiChu NVARCHAR(MAX)
 )
