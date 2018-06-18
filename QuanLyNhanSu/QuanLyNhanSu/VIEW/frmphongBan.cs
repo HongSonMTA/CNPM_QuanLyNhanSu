@@ -128,7 +128,7 @@ namespace QuanLyNhanSu.VIEW
             {
                 obj.MaPB = txtMaPB.Text;
                 obj.TenPB = txtTenPB.Text;
-                obj.MaTP = cmbMaTP.Text;
+                obj.MaTP = cmbMaTP.SelectedValue.ToString();
                 obj.DiaChi = txtDiaChi.Text;
                 obj.Sdt = txtSdt.Text;
                 if (fluu == 0)
@@ -228,6 +228,11 @@ namespace QuanLyNhanSu.VIEW
                 frmTTPhongBan frmNV = new frmTTPhongBan();
                 frmNV.Show();
             }
+        }
+
+        private void cmbMaTP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
