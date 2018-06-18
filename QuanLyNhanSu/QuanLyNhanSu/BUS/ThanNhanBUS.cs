@@ -33,5 +33,15 @@ namespace QuanLyNhanSu.BUS
         {
             return thanNhanDAL.TimKiem(strTimKiem);
         }
+        public string TangMa()
+        {
+            return thanNhanDAL.TangMa();
+        }
+
+        public DataTable GetListNhanVien()
+        {
+            return thanNhanDAL.GetListNhanVien();
+        }
+
     }
 }

@@ -171,6 +171,7 @@ namespace QuanLyNhanSu.VIEW
             {
                 HienThi();
                 khoaBtn(false);
+                clearTxt();
                 fluu = 1;
 
             }

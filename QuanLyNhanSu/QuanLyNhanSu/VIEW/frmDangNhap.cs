@@ -20,6 +20,7 @@ namespace QuanLyNhanSu.VIEW
 
         public static string Temp;
         public static string TaiKhoan;
+        public static string MatKhau;
         public frmDangNhap()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace QuanLyNhanSu.VIEW
         {
             TaiKhoan = txtTaiKhoan.Text;
             Temp = cmbQuyen.Text;
+            MatKhau = txtMatKhau.Text;
             nd.TaiKhoan= txtTaiKhoan.Text ;
              nd.MatKhau= txtMatKhau.Text ;
              nd.PhanQuyen= cmbQuyen.Text ;

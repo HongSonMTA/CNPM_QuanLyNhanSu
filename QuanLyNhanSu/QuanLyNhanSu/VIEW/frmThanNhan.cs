@@ -53,6 +53,7 @@ namespace QuanLyNhanSu.VIEW
             txtTuoi.Enabled = e;
             cbGioiTinh.Enabled = e;
             txtMQH.Enabled = e;
+            txtMaTN.Enabled = e;
         }
 
         private void clearTxt()
@@ -62,12 +63,13 @@ namespace QuanLyNhanSu.VIEW
             txtTuoi.Text = "";
             cbGioiTinh.Text = "";
             txtMQH.Text = "";
+            txtMaTN.Text = "";
         }
 
         public void ShowNhanVien()
         {
             DataTable dt = new DataTable();
-            dt = nhanVienBus.GetData();
+            dt = thanNhanBus.GetListNhanVien();
             cbNhanVien.DataSource = dt;
             cbNhanVien.DisplayMember = "HoTen";
             cbNhanVien.ValueMember = "MaNV";
@@ -94,7 +96,8 @@ namespace QuanLyNhanSu.VIEW
                 HienThi();
                 khoaBtn(false);
                 clickBtn = 1;
-
+                clearTxt();
+               
             }
             else
                 return;
@@ -102,11 +105,23 @@ namespace QuanLyNhanSu.VIEW
 
         private void dgvThanNhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTenTN.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["TenTN"].Value);
-            txtTuoi.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["Tuoi"].Value);
-            cbGioiTinh.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["GioiTinh"].Value);
-            cbNhanVien.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MaNV"].Value);
-            txtMQH.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MoiQuanHe"].Value);
+            if (clickBtn == 0)
+            {
+                txtTenTN.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["TenTN"].Value);
+                txtTuoi.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["Tuoi"].Value);
+                cbGioiTinh.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["GioiTinh"].Value);
+                cbNhanVien.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MaNV"].Value);
+                txtMQH.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MoiQuanHe"].Value);
+            }
+            else
+            {
+                txtMaTN.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MaTN"].Value);
+                txtTenTN.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["TenTN"].Value);
+                txtTuoi.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["Tuoi"].Value);
+                cbGioiTinh.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["GioiTinh"].Value);
+                cbNhanVien.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MaNV"].Value);
+                txtMQH.Text = Convert.ToString(dgvThanNhan.CurrentRow.Cells["MoiQuanHe"].Value);
+            }
         }
 
         private void dgvThanNhan_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
@@ -136,14 +151,17 @@ namespace QuanLyNhanSu.VIEW
         private void btnThem_Click(object sender, EventArgs e)
         {
             clickBtn = 0;          
-            khoaBtn(true);          
+            khoaBtn(true);
+            clearTxt();
+            txtMaTN.Text = thanNhanBus.TangMa();
+            txtMaTN.Enabled = false;
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
             clickBtn = 1;
             khoaBtn(true);
-            txtTenTN.Enabled = false;
+            txtMaTN.Enabled = false;
         }
 
        
@@ -156,6 +174,7 @@ namespace QuanLyNhanSu.VIEW
             }
             else
             {
+                thanNhan.MaTN = txtMaTN.Text;
                 thanNhan.TenTN = txtTenTN.Text;
                 thanNhan.GioiTinh = cbGioiTinh.Text;
                 thanNhan.Tuoi = Convert.ToInt32(txtTuoi.Text);
@@ -196,17 +215,21 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
+            if (cmbTimKiem.Text.Equals("Theo Mã Thân Nhân"))
+            {
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT MaTN,TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND MaTN LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+            }
             if (cmbTimKiem.Text.Equals( "Theo Tên Thân Nhân"))
             {
-                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND TenTN LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT MaTN,TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND TenTN LIKE '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cmbTimKiem.Text.Equals("Theo Tên Nhân Viên"))
             {
-                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND HoTen LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT MaTN, TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND HoTen LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cmbTimKiem.Text.Equals("Theo Tuổi"))
             {
-                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND Tuoi LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvThanNhan.DataSource = thanNhanBus.TimKiem("SELECT MaTN,TenTN, HoTen ,ThanNhan.GioiTinh,Tuoi,MoiQuanHe FROM dbo.ThanNhan,dbo.NhanVien WHERE NhanVien.MaNV = ThanNhan.MaNV AND Tuoi LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
 

@@ -21,6 +21,7 @@ namespace QuanLyNhanSu.DAL
         {
             SqlParameter[] para =
             {
+                new SqlParameter("MaTN",thanNhan.MaTN),
                 new SqlParameter("TenTN",thanNhan.TenTN),
                 new SqlParameter("MaNV",thanNhan.MaNV),
                 new SqlParameter("GioiTinh",thanNhan.GioiTinh),
@@ -33,6 +34,7 @@ namespace QuanLyNhanSu.DAL
         {
             SqlParameter[] para =
             {
+                new SqlParameter("MaTN",thanNhan.MaTN),
                 new SqlParameter("TenTN",thanNhan.TenTN),
                 new SqlParameter("MaNV",thanNhan.MaNV),
                 new SqlParameter("GioiTinh",thanNhan.GioiTinh),
@@ -41,17 +43,25 @@ namespace QuanLyNhanSu.DAL
             };
             return conn.ExcuteSQL("SP_SuaThanNhan", para);
         }
-        public int DeleteData(string tenThanNhan)
+        public int DeleteData(string MaTN)
         {
             SqlParameter[] para =
             {
-                new SqlParameter("TenTN",tenThanNhan)
+                new SqlParameter("MaTN",MaTN)
         };
             return conn.ExcuteSQL("SP_XoaThanNhan", para);
         }
         public DataTable TimKiem(string strTimKiem)
         {
             return conn.GetData(strTimKiem);
+        }
+        public string TangMa()
+        {
+            return conn.TangMa("Select * From ThanNhan ", "TN");
+        }
+        public DataTable GetListNhanVien()
+        {
+            return conn.GetData("SP_SelectNV", null);
         }
     }
 }

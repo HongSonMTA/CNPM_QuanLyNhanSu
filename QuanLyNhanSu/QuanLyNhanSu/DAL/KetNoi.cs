@@ -33,20 +33,24 @@ namespace QuanLyNhanSu.DAL
             da.Fill(dt);
             if (dt.Rows.Count <= 0)
             {
-                Ma = Ma + "01";
+                Ma = Ma + "0001";
             }
             else
             {
                 int k;                
-                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 2));
+                k = Convert.ToInt32(dt.Rows[dt.Rows.Count - 1][0].ToString().Substring(2, 4));
                 k = k + 1;
                 if (k < 10)
                 {
-                    Ma = Ma + "0";
+                    Ma = Ma + "000";
                 }
                 else if (k < 100)
                 {
-                    Ma = Ma + "";
+                    Ma = Ma + "00";
+                }
+                else if (k < 1000)
+                {
+                    Ma = Ma + "0";
                 }
                 Ma = Ma + k.ToString();
             }

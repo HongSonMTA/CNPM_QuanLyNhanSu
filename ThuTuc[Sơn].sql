@@ -42,9 +42,13 @@ END
 
 -- Xóa Nhân Viên
 GO
-create PROC XoaNV(@MaNV VARCHAR(10))
+ALTER PROC XoaNV(@MaNV VARCHAR(10))
 AS
 BEGIN
+DELETE dbo.ThanNhan
+WHERE MaNV = @MaNV
+DELETE dbo.ThoiGianCongTac
+WHERE MaNV = @MaNV
 DELETE dbo.NhanVien
 WHERE MaNV=@MaNV
 END
@@ -159,7 +163,13 @@ AS
 BEGIN
 DELETE DanToc WHERE MaDanToc = @MaDanToc 
 END
-
-
-	SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND MaNV LIKE
-	SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND NhanVien.MaNV LIKE
+go
+ CREATE PROC SP_SelectNV
+ AS 
+ BEGIN
+ select Nv.MaNV , Nv.HoTen , TN.MaTN
+from dbo.NhanVien Nv left join dbo.ThanNhan TN
+on TN.MaNV = Nv.MaNV
+WHERE TN.MaTN IS NULL
+ END 
+ GO

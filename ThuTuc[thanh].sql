@@ -82,35 +82,35 @@ END
 
 --------------------------Thu tuc ThanNhan
 GO
-CREATE PROC SP_ThanNhanSelectAll
+ALTER PROC SP_ThanNhanSelectAll
 AS
 BEGIN
-	SELECT TenTN, nv.HoTen,tn.GioiTinh,Tuoi,MoiQuanHe
+	SELECT MaTN, TenTN, nv.HoTen,tn.GioiTinh,Tuoi,MoiQuanHe
 	FROM dbo.ThanNhan tn INNER JOIN NhanVien nv ON nv.MaNV = tn.MaNV
 END 
 
 GO
- ALTER PROC SP_ThemThanNhan ( @TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT )
+ ALTER PROC SP_ThemThanNhan (@MaTN VARCHAR(10), @TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT )
  AS
  BEGIN
-	INSERT INTO dbo.ThanNhan( TenTN, MaNV, GioiTinh, MoiQuanHe, Tuoi)
-	VALUES  (@TenTN, @MaNV, @GioiTinh, @MoiQuanHe, @Tuoi)
+	INSERT INTO dbo.ThanNhan( MaTN,TenTN, MaNV, GioiTinh, MoiQuanHe, Tuoi)
+	VALUES  (@MaTN,@TenTN, @MaNV, @GioiTinh, @MoiQuanHe, @Tuoi)
  END 
 
  GO 
- CREATE PROC SP_SuaThanNhan (@TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT )
+ ALTER PROC SP_SuaThanNhan (@MaTN VARCHAR(10),@TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT )
 AS
 BEGIN
 	UPDATE dbo.ThanNhan 
 	SET MaNV = @MaNV,TenTN = @TenTN,GioiTinh = @GioiTinh, Tuoi=@Tuoi, MoiQuanHe = @MoiQuanHe
-	WHERE TenTN = @TenTN
+	WHERE MaTN = @MaTN
 END
 
 GO 
-CREATE PROC SP_XoaThanNhan @TenTN NVARCHAR(50)
+ALTER PROC SP_XoaThanNhan @MaTN VARCHAR(10)
 AS
 BEGIN
 	DELETE dbo.ThanNhan
-	WHERE TenTN = @TenTN
+	WHERE MaTN = @MaTN
 END
 

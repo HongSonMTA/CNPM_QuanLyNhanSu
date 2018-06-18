@@ -8,6 +8,7 @@ namespace QuanLyNhanSu.ENTITY
 {
     public class ThanNhan
     {
+        public string MaTN { get; set; }
         public string TenTN { get; set; }
         public string MaNV { get; set; }
         public string GioiTinh { get; set; }

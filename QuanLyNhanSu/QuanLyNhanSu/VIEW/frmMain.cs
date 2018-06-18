@@ -132,6 +132,8 @@ namespace QuanLyNhanSu.VIEW
                 quảnLýChứcVụToolStripMenuItem.Enabled = true;
                 quảnLýThânNhânToolStripMenuItem.Enabled = true;
                 quảnLýDânTộcToolStripMenuItem.Enabled = true;
+                btnChucVu.Enabled = true;
+                btnDanToc.Enabled = true;
             }
             timer1.Enabled = true;
         }

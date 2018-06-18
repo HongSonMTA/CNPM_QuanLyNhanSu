@@ -322,6 +322,7 @@
             // 
             // btnChucVu
             // 
+            this.btnChucVu.Enabled = false;
             this.btnChucVu.Image = global::QuanLyNhanSu.Properties.Resources.briefcase_document;
             this.btnChucVu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnChucVu.ImageTransparentColor = System.Drawing.Color.Magenta;
@@ -344,6 +345,7 @@
             // 
             // btnDanToc
             // 
+            this.btnDanToc.Enabled = false;
             this.btnDanToc.Image = global::QuanLyNhanSu.Properties.Resources.houses2;
             this.btnDanToc.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnDanToc.ImageTransparentColor = System.Drawing.Color.Magenta;

@@ -27,11 +27,11 @@ namespace QuanLyNhanSu.VIEW
             bool checkpass = check.Checked;
             if (checkpass)
             {
-                txtDKMatKhau.UseSystemPasswordChar = false;
+                txtMatKhauMoi.UseSystemPasswordChar = false;
                 txtNhapLaiMatKhau.UseSystemPasswordChar = false;
             }
             else
-                txtDKMatKhau.UseSystemPasswordChar = true;
+                txtMatKhauMoi.UseSystemPasswordChar = true;
                  txtNhapLaiMatKhau.UseSystemPasswordChar = false;
         }
         private void btnHuy_Click(object sender, EventArgs e)
@@ -43,24 +43,32 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnDoiPass_Click(object sender, EventArgs e)
         {
-            nd.TaiKhoan = frmDangNhap.TaiKhoan;
-            nd.MatKhau = txtDKMatKhau.Text;
-
-            if (txtDKMatKhau.Text == "")
+            if (txtMatKhauCu.Text != frmDangNhap.MatKhau)
             {
-                lblLoiDangKiMatKhau.Text = "Bạn chưa nhập mật khẩu";
-            }
-            else if (txtDKMatKhau.Text != txtNhapLaiMatKhau.Text)
-            {
-                lblLoiNhapLaiMatKhau.Text = "Mật khẩu không trùng khớp";
+                lbMatKhauCu.Text = "Mật Khẩu Không Đúng";
             }
             else
             {
-                Bus.SuaTaiKhoan(nd);
-                MessageBox.Show("Đổi Mật Khẩu Thành Công!");
-                frmMain frmTK = new frmMain();
-                frmTK.Show();
-                this.Close();
+
+                nd.TaiKhoan = frmDangNhap.TaiKhoan;
+                nd.MatKhau = txtMatKhauMoi.Text;
+
+                if (txtMatKhauMoi.Text == "")
+                {
+                    lbMatKhauMoi.Text = "Bạn chưa nhập mật khẩu";
+                }
+                else if (txtMatKhauMoi.Text != txtNhapLaiMatKhau.Text)
+                {
+                    lbMatKhau.Text = "Mật khẩu không trùng khớp";
+                }
+                else
+                {
+                    Bus.SuaTaiKhoan(nd);
+                    MessageBox.Show("Đổi Mật Khẩu Thành Công!");
+                    frmMain frmTK = new frmMain();
+                    frmTK.Show();
+                    this.Close();
+                }
             }
         }
     }
