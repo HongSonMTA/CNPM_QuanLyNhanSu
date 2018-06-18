@@ -65,23 +65,6 @@ namespace QuanLyNhanSu.DAL
         public DataTable TimKiemNV(string strTimKiem)
         {
             return conn.GetData(strTimKiem);
-        }
-        
-        public DataTable GetListBoPhan()
-        {
-            return conn.GetData("PB_Select ", null);
-        }
-        public DataTable GetListLuong()
-        {
-            return conn.GetData("SP_Luong_SelectAll ", null);
-        }
-        public DataTable GetListTDHV()
-        {
-            return conn.GetData("SP_TDHV_SelectAll", null);
-        }
-        public DataTable GetListChucVu()
-        {
-            return conn.GetData("SelectAll_CV", null);
-        }
+        }    
     }
 }

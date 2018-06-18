@@ -51,5 +51,9 @@ namespace QuanLyNhanSu.DAL
         {
             return kn.TangMa("SELECT * FROM dbo.TrinhDoHocVan","TD");
         }
+        public DataTable TimKiem(string strTimKiem)
+        {
+            return kn.GetData(strTimKiem);
+        }
     }
 }

@@ -43,10 +43,19 @@ namespace QuanLyNhanSu.VIEW
             txtDiaChi.Text = "";
             txtSdt.Text = "";
         }
+        public void ShowNhanVien()
+        {
+            DataTable dt = new DataTable();
+            dt = Bus.GetListNhanVien();
+            cmbMaTP.DataSource = dt;
+            cmbMaTP.DisplayMember = "HoTen";
+            cmbMaTP.ValueMember = "MaNV";
 
+        }
         private void HienThi()
         {
             dgvPhongBan.DataSource = Bus.GetData();
+            ShowNhanVien();
         }
         private void dgvPhongBan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -111,40 +120,47 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            obj.MaPB = txtMaPB.Text;
-            obj.TenPB = txtTenPB.Text;
-            obj.MaTP = cmbMaTP.Text;
-            obj.DiaChi = txtDiaChi.Text;
-            obj.Sdt = txtSdt.Text;
-            if(fluu == 0)
+            if (txtDiaChi.Text == " " || txtSdt.Text == " " || txtTenPB.Text == " ")
             {
-                try
-                {
-                    Bus.InsertData(obj);
-                    MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
-                    fluu = 1;
-                }
-                catch
-                {
-
-                }
+                MessageBox.Show("Yêu Cầu Nhâp Đầy Đủ Thông Tin");
             }
             else
             {
-                try
+                obj.MaPB = txtMaPB.Text;
+                obj.TenPB = txtTenPB.Text;
+                obj.MaTP = cmbMaTP.Text;
+                obj.DiaChi = txtDiaChi.Text;
+                obj.Sdt = txtSdt.Text;
+                if (fluu == 0)
                 {
-                    Bus.UpdateData(obj);
-                    MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    HienThi();
-                    clearData();
-                    DisEnl(false);
+                    try
+                    {
+                        Bus.InsertData(obj);
+                        MessageBox.Show("Thêm thành công!", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                        fluu = 1;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi" + ex.Message);
+                    }
                 }
-                catch
+                else
                 {
-
+                    try
+                    {
+                        Bus.UpdateData(obj);
+                        MessageBox.Show("Sửa Thành Công ! ", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        HienThi();
+                        clearData();
+                        DisEnl(false);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi" + ex.Message);
+                    }
                 }
             }
         }
@@ -204,7 +220,6 @@ namespace QuanLyNhanSu.VIEW
                 dgvPhongBan.DataSource = Bus.TimKiemPB("SELECT * FROM dbo.PhongBan WHERE Sdt LIKE'%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
-
         private void btnTTPB_Click(object sender, EventArgs e)
         {
             if (txtMaPB.Text != null)
@@ -213,11 +228,6 @@ namespace QuanLyNhanSu.VIEW
                 frmTTPhongBan frmNV = new frmTTPhongBan();
                 frmNV.Show();
             }
-        }
-
-        private void dgvPhongBan_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

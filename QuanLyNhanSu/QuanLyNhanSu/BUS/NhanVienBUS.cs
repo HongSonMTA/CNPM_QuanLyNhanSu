@@ -20,18 +20,6 @@ namespace QuanLyNhanSu.BUS
         {
             return da.TangMa();
         }
-        public DataTable GetListBoPhan()
-        {
-            return da.GetListBoPhan();
-        }
-        public DataTable GetListLuong()
-        {
-            return da.GetListLuong();
-        }
-        public DataTable GetListTDHV()
-        {
-            return da.GetListTDHV();
-        }
         public int InsertData(NhanVienEntity NV)
         {
             return da.InsertData(NV);
@@ -47,10 +35,6 @@ namespace QuanLyNhanSu.BUS
         public DataTable TimKiemNV(string strTimKiem)
         {
             return da.TimKiemNV(strTimKiem);
-        }
-        public DataTable GetListChucVu()
-        {
-            return da.GetListChucVu();
         }
     }
 }

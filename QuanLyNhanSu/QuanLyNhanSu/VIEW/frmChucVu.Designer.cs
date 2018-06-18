@@ -46,6 +46,10 @@
             this.MaCV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenCV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label13 = new System.Windows.Forms.Label();
+            this.cmbTimKiem = new System.Windows.Forms.ComboBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).BeginInit();
@@ -65,11 +69,11 @@
             this.groupBox3.Controls.Add(this.txtMaChucVu);
             this.groupBox3.Controls.Add(this.lbMaChucVu);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Location = new System.Drawing.Point(2, 48);
+            this.groupBox3.Location = new System.Drawing.Point(2, 96);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(784, 430);
+            this.groupBox3.Size = new System.Drawing.Size(784, 385);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Thông tin chức vụ";
@@ -79,7 +83,7 @@
             this.btnThoat.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
             this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThoat.Location = new System.Drawing.Point(574, 112);
+            this.btnThoat.Location = new System.Drawing.Point(596, 83);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(4);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(67, 51);
@@ -95,7 +99,7 @@
             this.btnHuy.Enabled = false;
             this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
             this.btnHuy.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnHuy.Location = new System.Drawing.Point(478, 112);
+            this.btnHuy.Location = new System.Drawing.Point(500, 83);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 50);
@@ -111,7 +115,7 @@
             this.btnLuu.Enabled = false;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLuu.Location = new System.Drawing.Point(389, 113);
+            this.btnLuu.Location = new System.Drawing.Point(411, 84);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(76, 50);
@@ -126,7 +130,7 @@
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(294, 113);
+            this.btnXoa.Location = new System.Drawing.Point(316, 84);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(72, 50);
@@ -141,7 +145,7 @@
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(200, 114);
+            this.btnSua.Location = new System.Drawing.Point(222, 85);
             this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(68, 50);
@@ -156,7 +160,7 @@
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(105, 114);
+            this.btnThem.Location = new System.Drawing.Point(127, 85);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(67, 50);
@@ -168,7 +172,7 @@
             // 
             // txtTenChucVu
             // 
-            this.txtTenChucVu.Location = new System.Drawing.Point(460, 41);
+            this.txtTenChucVu.Location = new System.Drawing.Point(470, 26);
             this.txtTenChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenChucVu.Name = "txtTenChucVu";
             this.txtTenChucVu.Size = new System.Drawing.Size(171, 25);
@@ -177,7 +181,7 @@
             // lbTenChucVu
             // 
             this.lbTenChucVu.AutoSize = true;
-            this.lbTenChucVu.Location = new System.Drawing.Point(352, 49);
+            this.lbTenChucVu.Location = new System.Drawing.Point(359, 34);
             this.lbTenChucVu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenChucVu.Name = "lbTenChucVu";
             this.lbTenChucVu.Size = new System.Drawing.Size(89, 17);
@@ -186,7 +190,7 @@
             // 
             // txtMaChucVu
             // 
-            this.txtMaChucVu.Location = new System.Drawing.Point(142, 41);
+            this.txtMaChucVu.Location = new System.Drawing.Point(149, 26);
             this.txtMaChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaChucVu.Name = "txtMaChucVu";
             this.txtMaChucVu.Size = new System.Drawing.Size(179, 25);
@@ -195,7 +199,7 @@
             // lbMaChucVu
             // 
             this.lbMaChucVu.AutoSize = true;
-            this.lbMaChucVu.Location = new System.Drawing.Point(8, 49);
+            this.lbMaChucVu.Location = new System.Drawing.Point(15, 34);
             this.lbMaChucVu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbMaChucVu.Name = "lbMaChucVu";
             this.lbMaChucVu.Size = new System.Drawing.Size(86, 17);
@@ -208,11 +212,11 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.dgvChucVu);
-            this.groupBox4.Location = new System.Drawing.Point(8, 197);
+            this.groupBox4.Location = new System.Drawing.Point(12, 153);
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(776, 233);
+            this.groupBox4.Size = new System.Drawing.Size(776, 224);
             this.groupBox4.TabIndex = 0;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Danh sách chức vụ";
@@ -228,7 +232,7 @@
             this.dgvChucVu.Location = new System.Drawing.Point(4, 22);
             this.dgvChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChucVu.Name = "dgvChucVu";
-            this.dgvChucVu.Size = new System.Drawing.Size(768, 207);
+            this.dgvChucVu.Size = new System.Drawing.Size(768, 198);
             this.dgvChucVu.TabIndex = 0;
             this.dgvChucVu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChucVu_CellClick);
             this.dgvChucVu.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvChucVu_RowPrePaint);
@@ -264,12 +268,68 @@
             this.label13.TabIndex = 22;
             this.label13.Text = "Quản Lý Chức Vụ";
             // 
+            // cmbTimKiem
+            // 
+            this.cmbTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbTimKiem.FormattingEnabled = true;
+            this.cmbTimKiem.Items.AddRange(new object[] {
+            "Mã Chức Vụ",
+            "Tên Chức Vụ"});
+            this.cmbTimKiem.Location = new System.Drawing.Point(552, 73);
+            this.cmbTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbTimKiem.Name = "cmbTimKiem";
+            this.cmbTimKiem.Size = new System.Drawing.Size(132, 25);
+            this.cmbTimKiem.TabIndex = 26;
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTimKiem.Location = new System.Drawing.Point(361, 72);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(187, 25);
+            this.txtTimKiem.TabIndex = 25;
+            // 
+            // btnLamMoi
+            // 
+            this.btnLamMoi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnLamMoi.Image = ((System.Drawing.Image)(resources.GetObject("btnLamMoi.Image")));
+            this.btnLamMoi.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLamMoi.Location = new System.Drawing.Point(688, 72);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(95, 26);
+            this.btnLamMoi.TabIndex = 23;
+            this.btnLamMoi.Text = "Làm Mới ";
+            this.btnLamMoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLamMoi.UseVisualStyleBackColor = true;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
+            // 
+            // btnTimKiem
+            // 
+            this.btnTimKiem.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimKiem.Location = new System.Drawing.Point(255, 71);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(102, 25);
+            this.btnTimKiem.TabIndex = 24;
+            this.btnTimKiem.Text = "Tìm Kiếm: ";
+            this.btnTimKiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
+            // 
             // frmChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(789, 481);
+            this.Controls.Add(this.cmbTimKiem);
+            this.Controls.Add(this.txtTimKiem);
+            this.Controls.Add(this.btnLamMoi);
+            this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.groupBox3);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,5 +366,9 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.ComboBox cmbTimKiem;
+        private System.Windows.Forms.TextBox txtTimKiem;
+        private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }

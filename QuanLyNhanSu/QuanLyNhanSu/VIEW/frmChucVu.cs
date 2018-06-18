@@ -151,5 +151,24 @@ namespace QuanLyNhanSu.VIEW
                 HienThi();
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (cmbTimKiem.Text.Equals("Mã Chức Vụ"))
+            {
+                dgvChucVu.DataSource = bus.TimKiem("SELECT * FROM dbo.ChucVu WHERE MaChucVu   LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            else if (cmbTimKiem.Text.Equals("Tên Chức Vụ"))
+            {
+                dgvChucVu.DataSource = bus.TimKiem("SELECT * FROM dbo.ChucVu WHERE TenChucVu  LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+        }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = " ";
+            cmbTimKiem.Text = " ";
+            HienThi();
+        }
     }
 }

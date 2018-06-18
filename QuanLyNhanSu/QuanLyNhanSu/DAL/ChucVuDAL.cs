@@ -50,5 +50,10 @@ namespace QuanLyNhanSu.DAL
         {
             return conn.TangMa("select * from ChucVu", "CV");
         }
+        public DataTable TimKiem(string str)
+        {
+            return conn.GetData(str);
+        }
+
     }
 }

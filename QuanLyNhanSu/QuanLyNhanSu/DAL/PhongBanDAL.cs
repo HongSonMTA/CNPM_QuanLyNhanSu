@@ -56,6 +56,10 @@ namespace QuanLyNhanSu.DAL
         {
             return conn.GetData(strTimKiem);
         }
-        
+        public DataTable GetListNhanVien()
+        {
+            return conn.GetData("SelectAll_NV", null);
+        }
+
     }
 }

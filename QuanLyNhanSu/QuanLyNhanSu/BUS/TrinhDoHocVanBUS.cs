@@ -32,5 +32,9 @@ namespace QuanLyNhanSu.BUS
         {
             return tdhvdal.TangMa();
         }
+        public DataTable TimKiem(string strTimKiem)
+        {
+            return tdhvdal.TimKiem(strTimKiem);
+        }
     }
 }

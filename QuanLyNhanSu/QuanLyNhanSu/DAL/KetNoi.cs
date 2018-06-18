@@ -13,7 +13,7 @@ namespace QuanLyNhanSu.DAL
        private SqlConnection conn;
         public KetNoi()
         {
-            conn = new SqlConnection(@"Data Source=MINH-PC;Initial Catalog=CNPM_QuanLyNhanSu;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=DESKTOP-CE8KMD8\SQLEXPRESS;Initial Catalog=CNPM_QuanLyNhanSu;Integrated Security=True");
         }
         public DataTable GetData(string strSql)
         {

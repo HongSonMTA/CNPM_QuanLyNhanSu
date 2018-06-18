@@ -43,13 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvPhongBan = new System.Windows.Forms.DataGridView();
-            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
@@ -61,6 +54,12 @@
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.btnTTPB = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaTP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
@@ -214,8 +213,7 @@
             this.TenPB,
             this.MaTP,
             this.DiaChi,
-            this.Sdt,
-            this.SoLuong});
+            this.Sdt});
             this.dgvPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhongBan.Location = new System.Drawing.Point(2, 20);
             this.dgvPhongBan.Margin = new System.Windows.Forms.Padding(2);
@@ -223,56 +221,7 @@
             this.dgvPhongBan.Size = new System.Drawing.Size(716, 284);
             this.dgvPhongBan.TabIndex = 0;
             this.dgvPhongBan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellClick);
-            this.dgvPhongBan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellContentClick);
             this.dgvPhongBan.RowPrePaint += new System.Windows.Forms.DataGridViewRowPrePaintEventHandler(this.dgvPhongBan_RowPrePaint);
-            // 
-            // STT
-            // 
-            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.STT.HeaderText = "STT";
-            this.STT.Name = "STT";
-            // 
-            // MaPB
-            // 
-            this.MaPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaPB.DataPropertyName = "MaPB";
-            this.MaPB.HeaderText = "Mã Phòng Ban";
-            this.MaPB.Name = "MaPB";
-            // 
-            // TenPB
-            // 
-            this.TenPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.TenPB.DataPropertyName = "TenPB";
-            this.TenPB.HeaderText = "Tên Phòng Ban";
-            this.TenPB.Name = "TenPB";
-            // 
-            // MaTP
-            // 
-            this.MaTP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.MaTP.DataPropertyName = "MaTP";
-            this.MaTP.HeaderText = "Mã Trường Phòng";
-            this.MaTP.Name = "MaTP";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // Sdt
-            // 
-            this.Sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Sdt.DataPropertyName = "SDT";
-            this.Sdt.HeaderText = "SĐT";
-            this.Sdt.Name = "Sdt";
-            // 
-            // SoLuong
-            // 
-            this.SoLuong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.SoLuong.DataPropertyName = "SoLuong";
-            this.SoLuong.HeaderText = "Số Lượng Nhân Viên";
-            this.SoLuong.Name = "SoLuong";
             // 
             // btnSua
             // 
@@ -427,6 +376,47 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Quản Lý Phòng Ban";
             // 
+            // STT
+            // 
+            this.STT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.STT.HeaderText = "STT";
+            this.STT.Name = "STT";
+            // 
+            // MaPB
+            // 
+            this.MaPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaPB.DataPropertyName = "MaPB";
+            this.MaPB.HeaderText = "Mã Phòng Ban";
+            this.MaPB.Name = "MaPB";
+            // 
+            // TenPB
+            // 
+            this.TenPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenPB.DataPropertyName = "TenPB";
+            this.TenPB.HeaderText = "Tên Phòng Ban";
+            this.TenPB.Name = "TenPB";
+            // 
+            // MaTP
+            // 
+            this.MaTP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaTP.DataPropertyName = "MaTP";
+            this.MaTP.HeaderText = "Mã Trường Phòng";
+            this.MaTP.Name = "MaTP";
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            // 
+            // Sdt
+            // 
+            this.Sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Sdt.DataPropertyName = "SDT";
+            this.Sdt.HeaderText = "SĐT";
+            this.Sdt.Name = "Sdt";
+            // 
             // frmphongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -486,14 +476,13 @@
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.ComboBox cmbTimKiem;
         private System.Windows.Forms.Button btnLamMoi;
+        private System.Windows.Forms.Button btnTTPB;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn STT;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaPB;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaTP;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sdt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoLuong;
-        private System.Windows.Forms.Button btnTTPB;
-        private System.Windows.Forms.Label label6;
     }
 }

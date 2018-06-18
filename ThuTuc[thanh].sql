@@ -90,10 +90,10 @@ BEGIN
 END 
 
 GO
- CREATE PROC SP_ThemThanNhan  @TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT 
+ ALTER PROC SP_ThemThanNhan ( @TenTN NVARCHAR(50),@MaNV VARCHAR(10),@GioiTinh NVARCHAR(5),@MoiQuanHe NVARCHAR(50), @Tuoi INT )
  AS
  BEGIN
-	INSERT dbo.ThanNhan( TenTN, MaNV, GioiTinh, MoiQuanHe, Tuoi)
+	INSERT INTO dbo.ThanNhan( TenTN, MaNV, GioiTinh, MoiQuanHe, Tuoi)
 	VALUES  (@TenTN, @MaNV, @GioiTinh, @MoiQuanHe, @Tuoi)
  END 
 
@@ -113,3 +113,4 @@ BEGIN
 	DELETE dbo.ThanNhan
 	WHERE TenTN = @TenTN
 END
+

@@ -161,5 +161,27 @@ namespace QuanLyNhanSu.VIEW
         {
            dgvTrinhDoHocVan.Rows[e.RowIndex].Cells["STT"].Value = e.RowIndex + 1;
         }
+
+        private void btnLamMoi_Click(object sender, EventArgs e)
+        {
+            txtTimKiem.Text = " ";
+            cmbTimKiem.Text = " ";
+            HienThi();
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if(cmbTimKiem.Text.Equals("Mã TDHV"))
+            {
+                dgvTrinhDoHocVan.DataSource = bus.TimKiem("SELECT * FROM dbo.TrinhDoHocVan WHERE MaTDHV   LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }else if(cmbTimKiem.Text.Equals("Tên TDHV"))
+            {
+                dgvTrinhDoHocVan.DataSource = bus.TimKiem("SELECT * FROM dbo.TrinhDoHocVan WHERE TenTrinhDo   LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+            else if (cmbTimKiem.Text.Equals("Chuyên Ngành"))
+            {
+                dgvTrinhDoHocVan.DataSource = bus.TimKiem("SELECT * FROM dbo.TrinhDoHocVan WHERE ChuyenNganh  LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+            }
+        }
     }
 }

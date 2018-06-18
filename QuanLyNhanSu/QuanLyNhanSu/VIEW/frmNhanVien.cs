@@ -17,9 +17,15 @@ namespace QuanLyNhanSu.VIEW
     {
         NhanVienEntity obj = new NhanVienEntity();
         NhanVienBUS Bus = new NhanVienBUS();
+
         ThoiGianCongTacBUS TimeBus = new ThoiGianCongTacBUS();
         ThoiGianCongTacEntity Time = new ThoiGianCongTacEntity();
+
         DanTocBUS dantocBus = new DanTocBUS();
+        PhongbanBus pbBus = new PhongbanBus();
+        ChucVuBUS cvBus = new ChucVuBUS();
+        TrinhDoHocVanBUS tdBus = new TrinhDoHocVanBUS();
+        LuongBus lBus = new LuongBus();
 
         private int fluu = 1;
         public frmNhanVien()
@@ -29,7 +35,7 @@ namespace QuanLyNhanSu.VIEW
         public void ShowPhongBan()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetListBoPhan();
+            dt = pbBus.GetData();
             cmbMaPB.DataSource = dt;
             cmbMaPB.DisplayMember = "TenPB";
             cmbMaPB.ValueMember = "MaPB";
@@ -38,7 +44,7 @@ namespace QuanLyNhanSu.VIEW
         public void ShowChucVu()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetListChucVu();
+            dt = cvBus.GetData();
             cmbChucVu.DataSource = dt;
             cmbChucVu.DisplayMember = "TenChucVu";
             cmbChucVu.ValueMember = "MaChucVu";
@@ -56,7 +62,7 @@ namespace QuanLyNhanSu.VIEW
         public void ShowLuong()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetListLuong();
+            dt = lBus.GetData();
             cmbBacLuong.DataSource = dt;
             cmbBacLuong.DisplayMember = "BacLuong";
             cmbBacLuong.ValueMember = "BacLuong";
@@ -64,7 +70,7 @@ namespace QuanLyNhanSu.VIEW
         public void ShowTDHV()
         {
             DataTable dt = new DataTable();
-            dt = Bus.GetListTDHV();
+            dt = tdBus.GetData();
             cmbMaTDHV.DataSource = dt;
             cmbMaTDHV.DisplayMember = "TenTrinhDo";
             cmbMaTDHV.ValueMember = "MaTDHV";
@@ -176,43 +182,43 @@ namespace QuanLyNhanSu.VIEW
         {
             if (cbTimKiem.Text == "Mã Nhân Viên")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and MaNV LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND NhanVien.MaNV LIKE '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Tên Nhân Viên")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and  HoTen LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND HoTen LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Dân Tộc")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and DanToc LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND TenDanToc LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Giới Tính")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and GioiTinh LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND GioiTinh LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "SĐT")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and NhanVien.SDT LIKE  '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND  NhanVien.SDT LIKE  '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Quê Quán")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and QueQuan LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND  QueQuan LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Ngày Sinh(năm-tháng-ngày)")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong and NgaySinh LIKE  '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND  NgaySinh LIKE  '%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "TĐHV")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong AND TenTrinhDo LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND TenTrinhDo LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Tên Phòng Ban")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong = (LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong AND PhongBan.TenPB LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND PhongBan.TenPB LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
             if (cbTimKiem.Text == "Lương")
             {
-                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT MaNV,HoTen,DanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong =(LuongCoBan+LuongCoBan*HeSoLuong+HeSoPhuCap*100000) FROM dbo.NhanVien INNER JOIN dbo.PhongBan ON PhongBan.MaPB = NhanVien.MaPB INNER JOIN dbo.Luong ON Luong.BacLuong = NhanVien.BacLuong INNER JOIN dbo.TrinhDoHocVan ON TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV WHERE(LuongCoBan + LuongCoBan * HeSoLuong + HeSoPhuCap * 100000) LIKE '%" + txtTimKiem.Text.Trim() + "%'");
+                dgvNhanVien.DataSource = Bus.TimKiemNV("SELECT dbo.NhanVien.MaNV,HoTen,TenDanToc,GioiTinh,NhanVien.SDT,QueQuan,NgaySinh,TenTrinhDo,TenPB,TienLuong=(LuongCoBan + LuongCoBan*HeSoLuong +HeSoLuong*100000),TenChucVu FROM dbo.NhanVien, dbo.PhongBan,dbo.TrinhDoHocVan,dbo.Luong,dbo.ChucVu,dbo.ThoiGianCongTac,DanToc WHERE  PhongBan.MaPB = NhanVien.MaPB   AND  Luong.BacLuong = NhanVien.BacLuong  AND  TrinhDoHocVan.MaTDHV = NhanVien.MaTDHV AND MaChucVu = MaCV AND NhanVien.MaNV = ThoiGianCongTac.MaNV AND DanToc.MaDanToc = dbo.NhanVien.MaDanToc AND (LuongCoBan + LuongCoBan * HeSoLuong + HeSoPhuCap * 100000) LIKE '%" + txtTimKiem.Text.Trim() + "%'");
             }
         }
 

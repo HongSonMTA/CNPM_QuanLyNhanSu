@@ -180,11 +180,11 @@ namespace QuanLyNhanSu.VIEW
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            if (cmbTimKiem.Text == "Mã Dân Tộc")
+            if (cmbTimKiem.Text .Equals ("Mã Dân Tộc"))
             {
                 dgvDanToc.DataSource = dantocBus.TimKiem("SELECT * FROM dbo.DanToc WHERE MaDanToc LIKE'%" + txtTimKiem.Text.Trim() + "%'");
             }
-            if (cmbTimKiem.Text == "Tên Dân Tộc")
+            if (cmbTimKiem.Text.Equals( "Tên Dân Tộc"))
             {
                 dgvDanToc.DataSource = dantocBus.TimKiem("SELECT * FROM dbo.DanToc WHERE TenDanToc LIKE N'%" + txtTimKiem.Text.Trim() + "%'");
             }
@@ -194,6 +194,7 @@ namespace QuanLyNhanSu.VIEW
         {
             txtTimKiem.Text = "";
             cmbTimKiem.Text = "";
+            HienThi();
         }
     }
 }
