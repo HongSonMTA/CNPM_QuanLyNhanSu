@@ -67,3 +67,4 @@ H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\D
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.csproj.CoreCompileInputs.cache
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.exe
 H:\Users\MINH\Documents\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.pdb
+G:\GitHub\CNPM_QuanLyNhanSu\QuanLyNhanSu\QuanLyNhanSu\obj\Debug\QuanLyNhanSu.VIEW.frmDanToc.resources

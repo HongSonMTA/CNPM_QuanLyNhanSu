@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using QuanLyNhanSu.BUS;
+using QuanLyNhanSu.ENTITY;
+using QuanLyNhanSu.VIEW;
 namespace QuanLyNhanSu
 {
     public partial class frmTTPhongBan : Form
@@ -19,7 +21,8 @@ namespace QuanLyNhanSu
 
         private void frmTTPhongBan_Load(object sender, EventArgs e)
         {
-
+            PhongbanBus busPB = new PhongbanBus();
+            dgvNhanVien.DataSource = busPB.GetData1(frmphongBan.Ma);
         }
     }
 }

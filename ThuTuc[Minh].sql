@@ -38,3 +38,11 @@ BEGIN
 END
 
 GO
+CREATE PROC PB_SellectNV @MaPB VARCHAR(10)
+AS 
+BEGIN
+	SELECT nv.MaNV, nv.HoTen,nv.DanToc,nv.GioiTinh,nv.SDT,nv.QueQuan,nv.NgaySinh,nv.MaTDHV,nv.BacLuong
+	FROM dbo.NhanVien nv
+	WHERE nv.MaPB = @MaPB
+
+END

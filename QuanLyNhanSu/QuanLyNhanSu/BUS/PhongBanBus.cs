@@ -16,6 +16,10 @@ namespace QuanLyNhanSu.BUS
         {
             return da.GetData();
         }
+        public DataTable GetData1(String MaPB)
+        {
+            return da.GetData(MaPB);
+        }
         public int InsertData(PhongBanEntity Pb)
         {
             return da.InsertData(Pb);
